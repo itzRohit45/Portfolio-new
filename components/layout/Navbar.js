@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useTheme } from "@/utils/ThemeContext";
 import { FaSun, FaMoon } from "react-icons/fa";
+import Logo from "@/components/ui/Logo";
 import styles from "./Navbar.module.css";
 
 export default function Navbar() {
@@ -19,7 +20,7 @@ export default function Navbar() {
       { name: "Home", link: "#home" },
       { name: "About", link: "#about" },
       { name: "Projects", link: "#projects" },
-      { name: "Experience", link: "#experience" },
+      { name: "Pricing", link: "#pricing" },
       { name: "Contact", link: "#contact" },
     ],
     []
@@ -85,7 +86,7 @@ export default function Navbar() {
     >
       <div className={styles.navbarContainer}>
         <Link href="/" className={styles.logo}>
-          <span className={styles.logoText}>Portfolio</span>
+          <Logo />
         </Link>
 
         <div className={styles.menuToggle} onClick={toggleMenu}>

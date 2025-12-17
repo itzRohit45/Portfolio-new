@@ -24,7 +24,7 @@ export default function Projects() {
       title: "AttendX",
       description:
         "A Smart Attendance Management System that automates attendance tracking using time and location sensitive QR codes and provides real-time analytics for educational institutions.",
-      image: "/images/logo6.ico",
+      image: "/images/attend.png",
       tags: ["React", "Node.js", "Socket.io", "MongoDB"],
       github: "https://github.com/itzRohit45/qrcheck",
       demo: "https://attendx-4d61.onrender.com",

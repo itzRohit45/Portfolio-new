@@ -1,9 +1,11 @@
 import "@/styles/globals.css";
 
 export const metadata = {
-  title: "Rohit Kumar | Portfolio",
+  title: "cinevibe.web | Professional Web Development Services",
   description:
-    "Personal portfolio showcasing my projects, skills, and experience as a Full Stack Developer.",
+    "Transform your vision into reality with cinevibe.sk. We create stunning websites, e-commerce stores, and custom web solutions. Professional web development services tailored to your business needs.",
+  keywords: "web development, website design, e-commerce, business websites, landing pages, cinevibe",
+  authors: [{ name: "cinevibe.web" }],
   icons: {
     icon: [
       { url: "/favicon.png" },
@@ -12,6 +14,11 @@ export const metadata = {
     ],
     shortcut: "/favicon.png",
     apple: { url: "/favicon.png", type: "image/png" },
+  },
+  openGraph: {
+    title: "cinevibe.web | Professional Web Development",
+    description: "Creating stunning digital experiences for your business",
+    type: "website",
   },
 };
 

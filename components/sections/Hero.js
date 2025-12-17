@@ -27,7 +27,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              Hi, I&apos;m <span className={styles.name}>Rohit Kumar</span>
+              Welcome to <span className={styles.name}>cinevibe.web</span>
             </motion.h1>
 
             <motion.h2
@@ -36,13 +36,14 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
-              <span>I am a </span>
+              <span>We Create </span>
               <span className={styles.typewriter}>
                 <Typewriter
                   words={[
-                    "Full Stack Developer",
-                    "Problem Solver",
-                    "Tech Enthusiast",
+                    "Stunning Websites",
+                    "E-Commerce Stores",
+                    "Business Solutions",
+                    "Digital Experiences",
                   ]}
                   loop={0}
                   cursor
@@ -60,9 +61,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >
-              Building modern web applications with cutting-edge technologies.
-              Passionate about creating seamless user experiences through clean
-              and efficient code.
+              Transform your vision into reality with our professional web development services.
+              We craft modern, responsive, and high-performing websites tailored to your business needs.
             </motion.p>
 
             <motion.div
@@ -71,15 +71,6 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.8 }}
             >
-              <Button
-                href="/resume.pdf" /* This path should match your resume's location in the public folder */
-                target="_blank"
-                rel="noopener noreferrer"
-                icon={<FaFileDownload />}
-                download="YourName_Resume.pdf" /* Optional: specifies the downloaded filename */
-              >
-                Download Resume
-              </Button>
               <Button
                 href="#contact"
                 variant="secondary"

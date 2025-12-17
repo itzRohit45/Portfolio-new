@@ -36,15 +36,8 @@ export default function ProjectCard({
     }, 100);
   };
 
-  // Apply a class to the body to prevent scrolling when a card is flipped
+  // Add keyboard event listener to close card with Escape key
   useEffect(() => {
-    if (isFlipped) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-
-    // Add keyboard event listener to close card with Escape key
     const handleKeyDown = (e) => {
       if (e.key === "Escape" && isFlipped) {
         setIsFlipped(false);
@@ -54,7 +47,6 @@ export default function ProjectCard({
     window.addEventListener("keydown", handleKeyDown);
 
     return () => {
-      document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
   }, [isFlipped]);

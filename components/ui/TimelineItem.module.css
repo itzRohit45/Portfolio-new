@@ -6,25 +6,33 @@
 
 .content {
   padding: 1.5rem;
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
   position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 :global(.dark-mode) .content {
-  background-color: rgba(31, 41, 55, 0.8);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
 }
 
 .content:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 48px 0 rgba(99, 102, 241, 0.3);
+  border-color: var(--primary-color);
 }
 
 :global(.dark-mode) .content:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 12px 48px 0 rgba(129, 140, 248, 0.3);
+  border-color: var(--secondary-color);
 }
 
 /* Date badge */

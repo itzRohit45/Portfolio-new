@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitter, FaEnvelope, FaHeart } from "react-icons/fa";
 import Link from "next/link";
+import Logo from "@/components/ui/Logo";
 import styles from "./Footer.module.css";
 import { fadeIn } from "@/utils/motion";
 
@@ -31,9 +32,10 @@ export default function Footer() {
         >
           <div className={styles.simpleFooter}>
             <div className={styles.footerLeft}>
-              <h2 className={styles.name}>Rohit Kumar</h2>
+              <Logo />
+              <p className={styles.tagline}>Crafting Digital Experiences</p>
               <p className={styles.copyright}>
-                &copy; {currentYear} All rights reserved.
+                &copy; {currentYear} cinevibe.web. Made with <FaHeart className={styles.heart} /> All rights reserved.
               </p>
             </div>
 

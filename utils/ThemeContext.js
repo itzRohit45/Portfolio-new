@@ -5,16 +5,16 @@ import { createContext, useContext, useState, useEffect } from "react";
 const ThemeContext = createContext();
 
 export function ThemeProvider({ children }) {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   // Initialize theme from localStorage on client side
   useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
 
-    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+    if (savedTheme === "light") {
+      setDarkMode(false);
+      document.body.classList.remove("dark-mode");
+    } else {
       setDarkMode(true);
       document.body.classList.add("dark-mode");
     }

@@ -43,6 +43,14 @@ export default function About() {
     },
   ];
 
+  // Stats for showcase
+  const stats = [
+    { number: "1.5+", label: "Years Experience" },
+    { number: "10+", label: "Projects Completed" },
+    { number: "90%", label: "Client Satisfaction" },
+    { number: "10+", label: "Technologies" },
+  ];
+
   return (
     <section id="about" className={styles.about}>
       <div className="container">
@@ -56,6 +64,27 @@ export default function About() {
           About Me
         </motion.h2>
 
+        {/* Bio Section - Full Width */}
+        <motion.div
+          className={styles.bioSection}
+          variants={fadeIn("up", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          <h3 className={styles.subtitle}>Who Am I?</h3>
+          <p className={styles.bio}>
+            Hi! I'm a <span className={styles.highlight}>Full Stack Developer</span> passionate about crafting beautiful, 
+            functional web experiences. With <span className={styles.highlight}>1.5+ years</span> of hands-on experience, 
+            I specialize in building scalable applications that solve real-world problems using modern technologies.
+          </p>
+          <p className={styles.bio}>
+            Currently pursuing <b>B.Tech in Computer Science (AI Specialization)</b> at{" "}
+            <b>IIIT Kancheepuram</b>. I combine academic AI/ML knowledge with practical development skills to create intelligent, user-centric solutions.
+          </p>
+        </motion.div>
+
+        {/* Image and Skills Section - Side by Side */}
         <div className={styles.content}>
           <motion.div
             className={styles.imageWrapper}
@@ -68,43 +97,23 @@ export default function About() {
               <Image
                 src="/images/profile.jpeg"
                 alt="Your Name - Profile Picture"
-                width={400}
-                height={500}
+                width={350}
+                height={400}
                 className={styles.profileImage}
                 priority
               />
-              <div className={styles.imageOverlay}></div>
             </div>
           </motion.div>
 
           <motion.div
-            className={styles.info}
-            variants={fadeIn("left", 0.5)}
+            className={styles.skillsWrapper}
+            variants={fadeIn("left", 0.4)}
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h3 className={styles.subtitle}>Who Am I?</h3>
-            <p className={styles.bio}>
-              I am a passionate Full Stack Developer with a strong foundation in
-              modern web technologies and a keen eye for building intuitive,
-              responsive, and dynamic user experiences. With over 1.5 years of
-              hands-on experience, I specialize in developing scalable and
-              performant web applications using cutting-edge tools and
-              frameworks across the full stack
-            </p>
-            <p className={styles.bio}>
-              Currently, I am pursuing a B.Tech in Computer Science and
-              Engineering with a specialization in Artificial Intelligence at
-              the{" "}
-              <b>Indian Institute of Information Technology, Kancheepuram</b>.
-              My academic journey has deepened my understanding of AI and
-              machine learning, allowing me to integrate intelligent systems
-              into the applications I build.
-            </p>
-
-            <h3 className={styles.subtitle}>My Skills</h3>
-            <div className={styles.skills}>
+            <h3 className={styles.subtitle}>Technical Skills</h3>
+            <div className={styles.skillsGrid}>
               {skills.map((skill, index) => (
                 <SkillBar
                   key={index}
@@ -115,6 +124,27 @@ export default function About() {
             </div>
           </motion.div>
         </div>
+
+        {/* Stats Section */}
+        <motion.div
+          className={styles.stats}
+          variants={staggerContainer(0.1, 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              className={styles.statItem}
+              variants={fadeIn("up", index * 0.1)}
+              whileHover={{ scale: 1.05 }}
+            >
+              <h3 className={styles.statNumber}>{stat.number}</h3>
+              <p className={styles.statLabel}>{stat.label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
 
         <motion.div
           className={styles.competencies}

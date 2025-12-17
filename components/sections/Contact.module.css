@@ -55,18 +55,24 @@
 .infoIcon {
   color: var(--primary-color);
   font-size: 1.5rem;
-  background: rgba(72, 49, 212, 0.1);
-  width: 40px;
-  height: 40px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.2);
 }
 
 :global(.dark-mode) .infoIcon {
   color: var(--secondary-color);
-  background: rgba(60, 229, 252, 0.1);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .infoContent h4 {
@@ -101,9 +107,11 @@
 .formGroup textarea {
   width: 100%;
   padding: 12px 15px;
-  border-radius: 8px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  background: white;
+  border-radius: 12px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   font-family: inherit;
   font-size: 1rem;
   transition: all 0.3s ease;
@@ -111,8 +119,10 @@
 
 :global(.dark-mode) .formGroup input,
 :global(.dark-mode) .formGroup textarea {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(15, 22, 36, 0.7);
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: var(--text-light);
 }
 

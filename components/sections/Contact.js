@@ -1,15 +1,5 @@
 "use client";
 
-/**
- * Contact Form with Formspree Integration
- *
- * EASY SETUP INSTRUCTIONS:
- * 1. Go to https://formspree.io/ and sign up for a free account
- * 2. Create a new form and copy your form ID (it looks like "xrgpkzld")
- * 3. Replace "YOUR_FORMSPREE_ID" in the action URL below with your form ID
- * 4. That's it! Formspree will send emails to your registered email address
- */
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from "react-icons/fa";
@@ -102,19 +92,19 @@ export default function Contact() {
     {
       icon: <FaEnvelope />,
       title: "Email",
-      content: "rohit9060755@gmail.com",
-      link: "mailto:rohit9060755@gmail.com",
+      content: "shubham002009@gmail.com",
+      link: "mailto:shubham002009@gmail.com",
     },
     {
       icon: <FaPhone />,
       title: "Phone",
-      content: "+91 7209087597",
-      link: "tel:+917209087597",
+      content: "+91 9229536067",
+      link: "tel:+9229536067",
     },
     {
       icon: <FaMapMarkerAlt />,
       title: "Location",
-      content: "Chennai, India",
+      content: "Current Location",
     },
   ];
 
@@ -248,14 +238,14 @@ export default function Contact() {
           viewport={{ once: true, amount: 0.1 }}
         >
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.55224774143!2d80.04151552935477!3d12.990643644417654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d639e244213%3A0x6873d3699e46fab7!2sChennai%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sus!4v1687027858352!5m2!1sen!2sus"
+            src="https://www.google.com/maps?q=25.5749581,83.98500705+(Chini+Mill,+Buxar)&z=14&output=embed"
             width="100%"
             height="400"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Chennai, India Map"
+            title="Chini Mill, Buxar Map"
           ></iframe>
         </motion.div>
       </div>
@@ -263,14 +253,4 @@ export default function Contact() {
   );
 }
 
-/*
-=== HOW TO SET UP FORMSPREE ===
 
-1. Go to https://formspree.io/ and sign up for a free account
-2. Click on "New Form" and give it a name (e.g., "Portfolio Contact")
-3. You'll get a form endpoint like: https://formspree.io/f/xrgpkzld
-4. Copy the ID (the part after "/f/") and replace "YOUR_FORMSPREE_ID" with it in the FORMSPREE_ENDPOINT variable
-5. Formspree's free plan gives you 50 submissions per month
-6. All emails will be sent to the email address you registered with Formspree
-7. No JavaScript configuration needed - it's much simpler than EmailJS!
-*/
