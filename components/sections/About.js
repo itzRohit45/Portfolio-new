@@ -74,7 +74,7 @@ export default function About() {
         >
           <h3 className={styles.subtitle}>Who Am I?</h3>
           <p className={styles.bio}>
-            Hi! I'm a <span className={styles.highlight}>Full Stack Developer</span> passionate about crafting beautiful, 
+            Hi! I&apos;m a <span className={styles.highlight}>Full Stack Developer</span> passionate about crafting beautiful, 
             functional web experiences. With <span className={styles.highlight}>1.5+ years</span> of hands-on experience, 
             I specialize in building scalable applications that solve real-world problems using modern technologies.
           </p>
