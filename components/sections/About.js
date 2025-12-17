@@ -95,10 +95,10 @@ export default function About() {
           >
             <div className={styles.imageContainer}>
               <Image
-                src="/images/profile.jpeg"
+                src="/images/profiles.png"
                 alt="Your Name - Profile Picture"
                 width={350}
-                height={400}
+                height={600}
                 className={styles.profileImage}
                 priority
               />
