@@ -1,62 +1,65 @@
 # Modern Portfolio Website
 
-A modern, responsive portfolio website built with Next.js, Framer Motion, and Three.js. This portfolio includes smooth scroll animations, 3D elements, and a clean, professional design.
+A stunning, fully responsive portfolio website built with Next.js 14, featuring smooth animations, 3D graphics, and a professional dark mode design. Showcasing projects, skills, and experience with interactive elements and modern UI/UX.
 
-## Features
+## ✨ Features
 
-- **Fully Responsive**: Looks great on all devices from mobile to desktop
-- **Smooth Animations**: Using Framer Motion for scroll-based animations
-- **3D Elements**: Three.js integration with interactive 3D objects
-- **Dark/Light Mode**: Toggle between dark and light themes
-- **Accessible Design**: WCAG-friendly contrast and keyboard navigation
-- **Modern UI**: Clean, minimalist design with micro-interactions
-- **Contact Form**: Fully functional contact form with email integration
-- **Performance Optimized**: Fast loading times and optimized assets
+- **🌙 Dark Mode Default**: Beautiful dark theme with light mode toggle
+- **🎨 Smooth Animations**: Framer Motion for stunning scroll-based animations
+- **🎯 3D Graphics**: Three.js integration with interactive spinning logo
+- **📱 Fully Responsive**: Perfect on all devices - mobile, tablet, and desktop
+- **🔄 Project Card Flip**: Interactive flip cards showing project details
+- **💰 Pricing Section**: Modern pricing cards with glassmorphism effects
+- **📧 Contact Form**: Functional contact form with validation
+- **🗺️ Google Maps**: Embedded map with custom location marker
+- **⚡ Performance Optimized**: Fast loading with Next.js 14 optimizations
+- **♿ Accessible**: WCAG-friendly with keyboard navigation support
 
-## Sections
+## 📑 Sections
 
-1. **Hero**: Introduction with animated typewriter effect and 3D element
-2. **About Me**: Personal information, skills, and competencies
-3. **Projects**: Showcase of projects with filter functionality and card flip animations
-4. **Experience**: Timeline of professional experience
-5. **Contact**: Contact form with validation and Google Maps integration
+1. **🏠 Hero**: Dynamic introduction with typewriter effect and 3D spinning logo
+2. **👤 About**: Personal info, skills with progress bars, and statistics
+3. **💼 Projects**: Interactive project cards with filter functionality and flip animation
+4. **💵 Pricing**: Service packages with modern card design
+5. **📬 Contact**: Contact form with email, phone, location info and embedded Google Maps
 
-## Tech Stack
+## 🛠️ Tech Stack
 
-- **Framework**: Next.js
-- **Styling**: CSS Modules
+- **Framework**: Next.js 14 (App Router)
+- **Styling**: CSS Modules with custom animations
 - **Animations**: Framer Motion
-- **3D Graphics**: Three.js
-- **Icons**: React Icons
-- **Form Handling**: Formspree
-- **Other**: React Simple Typewriter
+- **3D Graphics**: Three.js & React Three Fiber
+- **Icons**: React Icons (Font Awesome)
+- **Typewriter**: React Simple Typewriter
+- **Maps**: Google Maps Embed API
+- **Deployment**: Vercel
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 14.x or higher
+- Node.js 18.x or higher
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/portfolio.git
+   ```bash
+   git clone https://github.com/itzRohit45/Portfolio-new.git
    ```
 
 2. Navigate to the project directory:
-   ```
-   cd portfolio
+   ```bash
+   cd Portfolio-new
    ```
 
 3. Install dependencies:
-   ```
+   ```bash
    npm install
    ```
 
 4. Run the development server:
-   ```
+   ```bash
    npm run dev
    ```
 
@@ -66,53 +69,78 @@ A modern, responsive portfolio website built with Next.js, Framer Motion, and Th
 
 To create a production build:
 
-```
+```bash
 npm run build
 ```
 
 To start the production server:
 
-```
+```bash
 npm start
 ```
 
-## Customization
+## 🎨 Customization
 
 ### Personal Information
 
-Edit your personal information in the respective component files:
+Update your information in these files:
 
-- Update your name, role, and description in `/components/sections/Hero.js`
-- Update your bio in `/components/sections/About.js`
-- Update your projects in `/components/sections/Projects.js`
-- Update your experience in `/components/sections/Experience.js`
-- Update your contact information in `/components/sections/Contact.js`
-- Update your social links in `/components/layout/Footer.js`
+- **Hero Section**: `/components/sections/Hero.js` - Name, role, description
+- **About Section**: `/components/sections/About.js` - Bio, skills, stats
+- **Projects**: `/components/sections/Projects.js` - Your projects with links
+- **Pricing**: `/components/sections/Pricing.js` - Service packages
+- **Contact**: `/components/sections/Contact.js` - Email, phone, location
+- **Footer**: `/components/layout/Footer.js` - Social media links
 
 ### Images
 
-Replace the placeholder images in the `/public/images/` directory with your own images.
+Replace images in `/public/images/`:
+- `profile.jpg` - Your profile picture
+- `project1.png`, `project2.png`, etc. - Project screenshots
 
-### Colors
+### Theme Colors
 
-Update the color scheme by editing the CSS variables in `/styles/globals.css`.
+Edit CSS variables in `/app/globals.css`:
+```css
+:root {
+  --primary-color: #6366f1;
+  --secondary-color: #8b5cf6;
+  --text-dark: #1f2937;
+  --text-light: #f9fafb;
+}
+```
 
-### Email Setup
+### Google Maps
 
-To set up the contact form, update the Formspree form endpoint in `/components/sections/Contact.js` with your own form ID from [Formspree](https://formspree.io/).
+Update the map location in `/components/sections/Contact.js`:
+- Change coordinates in the iframe `src` URL
+- Update location name in the contact info
 
-1. Create a free account at [Formspree](https://formspree.io/)
-2. Create a new form and get your form ID (it looks like `xgeryabz`)
-3. Replace the placeholder form ID in the `action` attribute of the form in `/components/sections/Contact.js`
+## 📦 Deployment
 
-## License
+### Deploy on Vercel (Recommended)
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+1. Push your code to GitHub
+2. Go to [vercel.com](https://vercel.com)
+3. Import your repository
+4. Click "Deploy"
 
-## Acknowledgments
+Vercel automatically detects Next.js settings!
+
+### Deploy on Netlify
+
+1. Build the project: `npm run build`
+2. Deploy the `out` folder to Netlify
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🙏 Acknowledgments
 
 - Next.js team for the amazing framework
-- Framer Motion for the smooth animations
-- Three.js for the 3D capabilities
-- Formspree for the simple and effective form handling
+- Framer Motion for smooth animations
+- Three.js for 3D graphics
+- React Icons for beautiful icons
+- Vercel for hosting
 - All the incredible open-source contributors
